@@ -85,4 +85,50 @@ Notes
 <img width="2845" height="1682" alt="image" src="https://github.com/user-attachments/assets/9727be70-5b0e-47a0-94d3-76a852c1d8de" />
 <img width="2879" height="1705" alt="image" src="https://github.com/user-attachments/assets/44ce5c94-2132-4bc9-8112-ea33ccd159ad" />
 
+```
+publisher_sensor.py
+        │
+        │
+publisher_security.py
+        │
+        ▼
+   broker.hivemq.com
+        │
+ ┌──────┴────────┐
+ │               │
+ ▼               ▼
+subscriber_   subscriber_
+monitor.py    logger.py
+ │
+ ▼
+dashboard.py
+(Flask + SocketIO)
+ │
+ ▼
+Web Dashboard
+(http://localhost:5000)
+```
+
+```
+studyroom/
+│
+├── sensor/
+│   ├── temperature
+│   ├── humidity
+│   └── occupancy
+│
+├── security/
+│   ├── door
+│   ├── alarm
+│   └── camera
+│
+├── admin/
+│   ├── request
+│   ├── response
+│   └── broadcast
+│
+└── status/
+    ├── online
+    └── offline
+```
 
